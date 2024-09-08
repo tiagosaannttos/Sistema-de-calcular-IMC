@@ -1,0 +1,50 @@
+<?php
+$peso = (float)readline('Digite seu peso (em kg): ');
+$altura = (float)readline('Digite sua altura (em metros): ');
+
+
+if ($peso <= 0 || $altura <= 0) {
+    echo "Peso e altura devem ser positivos.\n";
+  
+}
+
+$imc = $peso / ($altura * $altura);
+
+
+if ($imc < 18.5) {
+    $condicao = "Abaixo do peso";
+} elseif ($imc >= 18.6 && $imc <= 24.9) {
+    $condicao = "Peso ideal (parabéns)";
+} elseif ($imc >= 25.0 && $imc <= 29.9) {
+    $condicao = "Levemente acima do peso";
+} elseif ($imc >= 30.0 && $imc <= 34.9) {
+    $condicao = "Obesidade grau I";
+} elseif ($imc >= 35.0 && $imc <= 39.9) {
+    $condicao = "Obesidade grau II (severa)";
+} else { // Maior ou igual a 40
+    $condicao = "Obesidade grau III (mórbida)";
+}
+
+echo "\nSeu IMC é: " . number_format($imc, 2) . "\n";
+echo "Condição: " . $condicao . "\n";
+
+
+
+
+
+9)
+<?php
+
+$nota1 = readline ('Digite a primeira a nota:');
+$nota2 = readline ('Digite a segunda  nota:');
+$nota3 = readline ('Digite a terceira  nota:');
+
+$media =($nota1 + $nota2 + $nota3) / 3;
+
+echo"\nA média das notas é:" . number_format($media, 2) . "\n";
+
+10)
+<?php
+
+
+$Produto = readline('Digite o valor do produto: ');
